@@ -4,12 +4,12 @@
 #include <Arduino.h>
 #include <WiFi.h>
 
-class OTA_Resolver
+class OTAResolver
 {
 public:
-    OTA_Resolver(String  versionCheckURL, String  bearerToken);
-    OTA_Resolver(const String& wifiSSID, const String& wifiPassword, String  versionCheckURL, String  bearerToken);
-    OTA_Resolver(const String& wifiSSID, const String& wifiPassword, String  versionCheckURL, String  bearerToken, unsigned long baud);
+    OTAResolver(String  versionCheckURL, String  bearerToken);
+    OTAResolver(const String& wifiSSID, const String& wifiPassword, String  versionCheckURL, String  bearerToken);
+    OTAResolver(const String& wifiSSID, const String& wifiPassword, String  versionCheckURL, String  bearerToken, unsigned long baud);
 
 private:
     String _versionCheckURL;

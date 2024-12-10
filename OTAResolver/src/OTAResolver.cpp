@@ -1,18 +1,18 @@
-#include <OTA_Resolver.h>
+#include <OTAResolver.h>
 
-OTA_Resolver::OTA_Resolver(String versionCheckURL, String bearerToken)
+OTAResolver::OTAResolver(String versionCheckURL, String bearerToken)
     : _versionCheckURL(std::move(versionCheckURL)), _bearerToken(std::move(bearerToken))
 {
 }
 
-OTA_Resolver::OTA_Resolver(const String& wifiSSID, const String& wifiPassword, String versionCheckURL,
+OTAResolver::OTAResolver(const String& wifiSSID, const String& wifiPassword, String versionCheckURL,
                            String bearerToken)
     : _versionCheckURL(std::move(versionCheckURL)), _bearerToken(std::move(bearerToken))
 {
     this->_beginWiFi(wifiSSID, wifiPassword);
 }
 
-OTA_Resolver::OTA_Resolver(const String& wifiSSID, const String& wifiPassword, String versionCheckURL,
+OTAResolver::OTAResolver(const String& wifiSSID, const String& wifiPassword, String versionCheckURL,
                            String bearerToken, const unsigned long baud)
     : _versionCheckURL(std::move(versionCheckURL)), _bearerToken(std::move(bearerToken))
 {
@@ -20,7 +20,7 @@ OTA_Resolver::OTA_Resolver(const String& wifiSSID, const String& wifiPassword, S
     this->_beginSerial(baud);
 }
 
-void OTA_Resolver::_beginWiFi(const String& wifiSSID, const String& wifiPassword)
+void OTAResolver::_beginWiFi(const String& wifiSSID, const String& wifiPassword)
 {
     Serial.println("connecting to wi-fi: " + wifiSSID);
     WiFi.begin(wifiSSID, wifiPassword);
@@ -37,7 +37,7 @@ void OTA_Resolver::_beginWiFi(const String& wifiSSID, const String& wifiPassword
     this->_isWiFiInitialized = true;
 }
 
-void OTA_Resolver::_beginSerial(const unsigned long baud)
+void OTAResolver::_beginSerial(const unsigned long baud)
 {
     Serial.begin(baud);
     int count = 10;
