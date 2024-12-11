@@ -6,6 +6,10 @@ set(CMAKE_CXX_STANDARD 14)
 include_directories(/Users/semyonkotliarenko/Library/Arduino15/packages/arduino/hardware/esp32/2.0.18-arduino.5/tools/sdk/esp32s3/include/freertos/include/freertos)
 include_directories(/Users/semyonkotliarenko/Library/Arduino15/packages/arduino/hardware/esp32/2.0.18-arduino.5/cores/esp32)
 include_directories(/Users/semyonkotliarenko/Library/Arduino15/packages/arduino/hardware/esp32/2.0.18-arduino.5/libraries/WiFi/src)
+include_directories(/Users/semyonkotliarenko/Library/Arduino15/packages/arduino/hardware/esp32/2.0.18-arduino.5/libraries/EEPROM/src)
+include_directories(/Users/semyonkotliarenko/Library/Arduino15/packages/arduino/hardware/esp32/2.0.18-arduino.5/libraries/HTTPClient/src)
+include_directories(/Users/semyonkotliarenko/Library/Arduino15/packages/arduino/hardware/esp32/2.0.18-arduino.5/libraries/Update/src)
+include_directories(/Users/semyonkotliarenko/Documents/Arduino/libraries/ArduinoJson/src)
 include_directories(OTAResolver/src)
 
 add_executable(arduino_libs
